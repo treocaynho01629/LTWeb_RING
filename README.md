@@ -1,8 +1,32 @@
 # LTWeb_RING
 An E-Commerce Web App using Java Servlet, JSP.
 
-- Config Path, User & Pass for MicrosoftSQL in DBContext.java first
-- Config Email & Pass in web.xml and active third party app in your google account for the auto mail function
+## Local setup
+#### Database setup (MSSQL)
+- Right click on `Database` folder
+- Choose `Restore Database`
+- Click on `Device` tick
+- Find the Initialize database file `RING.bak` and click `Restore`
+
+#### Config DBContext
+- Change Database Path, User & Pass of your MSSQL in `DBContext.java`
+```java
+    private final String userID = <your database username>;
+    private final String password = <your database password>;
+```
+#### Config web.xml
+- Change to your Email & Pass in `web.xml` and active `third party app` in your google account for the auto mail function
+```xml
+    <context-param>
+        <param-name>user</param-name>
+        <param-value>your email address</param-value>
+    </context-param>
+ 
+    <context-param>
+        <param-name>pass</param-name>
+        <param-value>your email password</param-value>
+    </context-param>
+```
 
 Good to go!
 
